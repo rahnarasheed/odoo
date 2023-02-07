@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_view_form_sale" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="sale.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@id='sale_config_online_confirmation_sign']" position="inside">
+                <div class="col-12 col-lg-6 o_setting_box" id="sale_config_online_confirmation_pay">
+                    <div class="o_setting_left_pane">
+                        <field name="sale_order"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="sale_order"/>
+                        <div class="text-muted">
+                            Create a sale order
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 o_setting_box" id="sale_config_online_confirmation_pay">
+                    <div class="o_setting_left_pane">
+                        <field name="quotation"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="quotation"/>
+                        <div class="text-muted">
+                            Create a quotation
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6 o_setting_box" id="sale_config_online_confirmation_pay">
+                    <div class="o_setting_left_pane">
+                        <field name="invoice"/>
+                    </div>
+                    <div class="o_setting_right_pane">
+                        <label for="invoice"/>
+                        <div class="text-muted">
+                            Create a invoice
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>
+

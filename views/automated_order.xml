@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<odoo>
+    <data>
+        <record id="product_template_view" model="ir.ui.view">
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//button[@name='action_open_label_layout']" position="before">
+                    <button name="button_so" class="oe_highlight" string="Sale Order" type="object"/>
+                </xpath>
+                <div name="button_box" position="inside">
+                    <button class="oe_stat_button" string="Order" type="object" name="get_sale_order" icon="fa-users">
+<!--                        <field string="Order" name="order" widget="statinfo"/>-->
+                    </button>
+                </div>
+            </field>
+        </record>
+    </data>
+</odoo>
